@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::post('/submit',[PostController::class,'store']);
+Route::get('/submit/view',[PostController::class,'index']);

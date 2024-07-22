@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('blog-post');
     }
 
     /**
@@ -36,6 +36,8 @@ class PostController extends Controller
         $post->body = $request['body'];
 
         $post->save();
+
+        return redirect('/submit/view');
     }
 
 
