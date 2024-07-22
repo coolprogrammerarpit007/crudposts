@@ -17,6 +17,7 @@ class PostController extends Controller
         return view('blog-post')->with($data);
     }
 
+    // function when get triggered use to show the home page.
     public function home(){
         return view('home');
     }
@@ -40,12 +41,15 @@ class PostController extends Controller
         $post = new Posts();
         $post->title = $request['title'];
         $post->body = $request['body'];
-
         $post->save();
 
         return redirect('/submit/view');
     }
 
+    // edit data
+    public function getEditData($id){
+        return view('edit-post');
+    }
 
     /**
      * Display the specified resource.
@@ -54,6 +58,7 @@ class PostController extends Controller
     {
         //
     }
+
 
     /**
      * Update the specified resource in storage.

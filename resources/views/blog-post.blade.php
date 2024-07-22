@@ -28,7 +28,7 @@
                 <div class="blog-post">
                     <p>{{$item->body}}</p>
                 </div>
-                <input type="submit" value="edit" id="edit">
+                <a href="{{'/edit/' . $item->id}}" id="edit">Edit</a>
             </div>
         @endforeach
 
