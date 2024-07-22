@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Playwrite AR", cursive;
+    background-color: aquamarine;
+    padding: 2rem;
+}
+
+/* ********************************************************* */
+
+.container{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-container{
+    display: flex;
+    flex-direction:column ;
+    gap: 2rem;
+}
+
+label{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: antiquewhite;
+}
+
+input,textarea{
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: navajowhite;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+}
+
+.input-btns{
+    background-color: green;
+    color: #fff;
+}
