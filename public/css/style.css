@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    font-family:"Edu AU VIC WA NT Hand", cursive; ;
+}
+
+/* *************************************************************************** */
+/* *************************************************************************** */
+
+/* End of css boiler text */
+
+/* Css Form Styling */
+body{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.form-container{
+    border: 1px solid green;
+    width: 100%;
+    height: 100vh;
+}
+
+fieldset{
+    text-align: center;
+}
+.form-container fieldset{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+label,legend{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+legend{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.input-container input{
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+    border: none;
+    width: 40%;
+    margin: auto;
+}
+
+textarea{
+    border: none;
+    padding: 2rem;
+    box-sizing: 0.8rem;
+}
+
+#submit{
+    background-color: seagreen;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+    transition:all 0.5s;
+    flex: 3;
+}
+.input-btns{
+    display: flex;
+    gap: 2rem;
+}
+#submit:hover{
+    background-color: #fff;
+    color: seagreen;
+    border: 2px solid seagreen;
+    padding: 1.5rem 2.2rem;
+}
+
+#edit{
+    background-color: rgb(212, 53, 53);
+    color: #fff;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+    transition:all 0.5s;
+    flex: 1;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+}
