@@ -17,6 +17,10 @@ class PostController extends Controller
         return view('blog-post')->with($data);
     }
 
+    public function home(){
+        return view('home');
+    }
+
     /**
      * Store a newly created resource in storage.
      */

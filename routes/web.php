@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-
+Route::get('/home',[PostController::class,'home'])->name('home');
 Route::post('/submit',[PostController::class,'store']);
 Route::get('/submit/view',[PostController::class,'index']);

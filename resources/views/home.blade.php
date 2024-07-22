@@ -33,7 +33,6 @@
                 </div>
                 <div class="input-btns">
                     <input type="submit" value="Submit" id="submit">
-                    <input type="submit" value="edit" id="edit">
                 </div>
             </fieldset>
         </form>

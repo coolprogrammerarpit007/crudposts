@@ -16,7 +16,24 @@
 </head>
 
 <body>
-    <h1>The Blog Post will be shown here.</h1>
+    <div class="container">
+        @foreach ($post as $item)
+            <div class="blog">
+                <div class="blog-title">
+                    <h3>{{$item->title}}</h3>
+                </div>
+                <div class="blog-date">
+                    <p>{{$item->created_at}}</p>
+                </div>
+                <div class="blog-post">
+                    <p>{{$item->body}}</p>
+                </div>
+                <input type="submit" value="edit" id="edit">
+            </div>
+        @endforeach
+
+        <button onclick="window.location.href='{{route('home')}}'" class="back-to-home">back to home</button>
+    </div>
 </body>
 
 </html>
