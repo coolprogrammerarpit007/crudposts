@@ -69,6 +69,10 @@ legend{
     width: 50%;
 }
 
+input,textarea:focus{
+    outline: none;
+}
+
 .input-container input{
     padding: 1.2rem;
     border-radius: 0.6rem;

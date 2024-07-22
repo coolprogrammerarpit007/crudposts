@@ -26,6 +26,10 @@ class PostController extends Controller
             'body'=>'required'
         ]);
 
+        echo "<pre>";
+        print_r($request->all());
+        echo "</pre";
+
         // Insert data into table
         $post = new Posts();
         $post->title = $request['title'];

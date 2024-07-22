@@ -19,7 +19,8 @@
 
 <body>
     <div class="container">
-        <form action="{{'/'}}/submit" class="form-container" method="POST">
+        <form action="{{url('/')}}/submit" class="form-container" method="POST">
+            @csrf
             <fieldset>
                 <legend>Create Your Post:</legend>
                 <div class="title-container input-container">
