@@ -12,7 +12,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('blog-post');
+        $post = Posts::all();
+        $data = compact('post');
+        return view('blog-post')->with($data);
     }
 
     /**
