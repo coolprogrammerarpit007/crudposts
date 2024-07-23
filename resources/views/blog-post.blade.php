@@ -28,7 +28,10 @@
                 <div class="blog-post">
                     <p>{{$item->body}}</p>
                 </div>
-                <a href = "{{url('submit/edit',$item->id)}}"id="edit">Edit</a>
+                <div class="action-btns">
+                    <a href = "{{url('submit/edit',$item->id)}}"id="edit" class="btn-warning">Edit</a>
+                    <a href = "{{url('submit/delete',$item->id)}}"id="delete" class="btn-danger">Delete</a>
+                </div>
             </div>
         @endforeach
 

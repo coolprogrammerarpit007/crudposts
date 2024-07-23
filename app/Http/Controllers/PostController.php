@@ -88,6 +88,10 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $post = Posts::find($id);
+        if($post){
+            $post->delete();
+            return redirect('blog-post');
+        }
     }
 }
