@@ -33,7 +33,7 @@
             {{-- <input type="text" name="title" id="title" value="{{$post_id}}"> --}}
             <div class="post-body input-container">
                 <label for="body">Edit your post message here</label>
-                <textarea name="body" id="body" cols="30" rows="10" placeholder="Edit your message here..." value="{{$post_body}}"></textarea>
+                <textarea name="body" id="body" cols="30" rows="10" placeholder="Edit your message here...">{{$post_body}}</textarea>
             </div>
             <div class="input-btns">
                 <input type="submit" value="Submit" id="submit">
