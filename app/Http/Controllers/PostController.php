@@ -32,40 +32,55 @@ class PostController extends Controller
             'title'=>'required|max:256',
             'body'=>'required'
         ]);
-
-        echo "<pre>";
-        print_r($request->all());
-        echo "</pre";
-
-        // Insert data into table
         $post = new Posts();
         $post->title = $request['title'];
         $post->body = $request['body'];
         $post->save();
 
-        return redirect('/submit/view');
+        return redirect('submit/view');
     }
 
     // edit data
-    public function getEditData($id){
-        return view('edit-post');
+    public function edit(Request $request, $id){
+        $post = Posts::find($id);
+        $data = compact('post');
+        return view('edit-post')->with($data);
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $post = Posts::all();
+        $data = compact('post');
+        return view('blog-post')->with($data);
     }
 
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request,$id)
     {
-        //
+
+
+        $request->validate([
+            'title' => 'required|max:256',
+            'body' => 'required'
+        ]);
+
+        $title =  $request->title;
+        $body =  $request->body;
+        $updatePostData =  Posts::find($id);
+        // check if post data exist or not
+        if($updatePostData){
+            $updatePostData->title =  $title;
+            $updatePostData->body =  $body;
+            $updatePostData->save();
+        }
+        return redirect('blog-post');
     }
 
     /**

@@ -20,4 +20,7 @@ Route::get('/', function () {
 Route::get('/home',[PostController::class,'home'])->name('home');
 Route::post('/submit',[PostController::class,'store']);
 Route::get('/submit/view',[PostController::class,'index']);
-Route::get('/edit/{id}', [PostController::class, 'getEditData']);
+Route::get('submit/edit/{id}',[PostController::class,'edit']);
+Route::post('update/{id}',[PostController::class,'update']);
+Route::get('blog-post',[PostController::class,'show']);
+

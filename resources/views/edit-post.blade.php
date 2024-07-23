@@ -18,13 +18,17 @@
 
 <body>
     <div class="container">
-        <form action="{{ url('/') }}/register" class="form-container" method="POST">
+        @php
+            $post_id = $post->id;
+        @endphp
+        <form action="{{url('/')}}/update/{{$post_id}}" class="form-container" method="POST">
             @csrf
             <h2 class="register-title">Edit your form here...</h2>
             <div class="title-container input-container">
                 <label for="title">Edit your title:</label>
                 <input type="text" name="title" id="text" placeholder="Edit your title here...">
             </div>
+            {{-- <input type="text" name="title" id="title" value="{{$post_id}}"> --}}
             <div class="post-body input-container">
                 <label for="body">Edit your post message here</label>
                 <textarea name="body" id="body" cols="30" rows="10" placeholder="Edit your message here..."></textarea>

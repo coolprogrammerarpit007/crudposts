@@ -28,7 +28,7 @@
                 <div class="blog-post">
                     <p>{{$item->body}}</p>
                 </div>
-                <a href="{{'/edit/' . $item->id}}" id="edit">Edit</a>
+                <a href = "{{url('submit/edit',$item->id)}}"id="edit">Edit</a>
             </div>
         @endforeach
 
